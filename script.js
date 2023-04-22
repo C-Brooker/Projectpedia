@@ -23,7 +23,10 @@ function isOwned() {
 
 //if the page is index.php sets event listeners and sets the userId session variable
 window.onload = () => {
-  if (window.location.pathname === "/Projectpedia/index.php") {
+  if (
+    window.location.pathname === "/index.php" ||
+    window.location.pathname === "/"
+  ) {
     dateSearch = document.querySelector("#date");
     nameSearch = document.querySelector("#search");
 
