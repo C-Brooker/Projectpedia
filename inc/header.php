@@ -15,7 +15,6 @@ if (!isset($_SESSION['initiated'])) {
 
 $currentPage = htmlspecialchars($_SERVER['PHP_SELF']);
 
-
 ?>
 
 
@@ -44,14 +43,14 @@ $currentPage = htmlspecialchars($_SERVER['PHP_SELF']);
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === "/php-learning/index.php" ? "text-decoration-underline" : "" ?>" href="index.php">Projects</a>
+                        <a class="nav-link <?php echo $currentPage === "/index.php" ? "text-decoration-underline" : "" ?>" href="index.php">Projects</a>
                     </li>
                     <?php
                     if (isset($_SESSION['userId'])) {
-                        echo '<li class="nav-item"> <a class="nav-link ' . ($currentPage === "/Projectpedia/addProject.php" ? "text-decoration-underline" : "") . '" href="addProject.php">Add Project</a></li>';
+                        echo '<li class="nav-item"> <a class="nav-link ' . ($currentPage === "/addProject.php" ? "text-decoration-underline" : "") . '" href="addProject.php">Add Project</a></li>';
                         echo '<li class="nav-item"><a class="nav-link" href="#" onclick="logout()">Log Out</a> </li>';
                     } else {
-                        if ($currentPage == "/Projectpedia/login.php" || $currentPage == "/Projectpedia/register.php") {
+                        if ($currentPage == "/login.php" || $currentPage == "/register.php") {
                             echo '<li class="nav-item text-decoration-underline"><a class="nav-link"href="login.php">Login/Register</a></li>';
                         } else {
                             echo '<li class="nav-item"><a class="nav-link" href="login.php">Login/Register</a></li>';
